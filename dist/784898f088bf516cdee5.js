@@ -1,1 +1,0 @@
-import Goblin from"./Goblin";var Game=new Goblin(document.querySelector(".goblin"));Game.change();

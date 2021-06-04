@@ -2,21 +2,21 @@ import Goblin from '../Goblin';
 
 jest.useFakeTimers();
 
-test('change cell', () => {
+test('rotate cell', () => {
   const html = document.createElement('div');
-  html.innerHTML = `<section class="goblin">
-    <div class="row">
-      <div class="col">
+  html.innerHTML = `<label class="goblin_game">
+    <tr>
+      <div class="cage">
         <img src="img/goblin.png" class="head">
       </div>
-      <div class="col"></div>
-      <div class="col"></div>
-      <div class="col"></div>
-    </div>
-  </div>`;
-  const Game = new Goblin(html.querySelector('.goblin'));
+      <div class="cage"></div>
+      <div class="cage"></div>
+      <div class="cage"></div>
+    </tr>
+  </label>`;
+  const Game = new Goblin(html.querySelector('.goblin_game'));
   expect(Game.cells[0].contains(Game.goblinHead)).toBeTruthy();
-  Game.change();
+  Game.rotate();
   jest.runTimersToTime(1500);
   expect(Game.cells[0].contains(Game.goblinHead)).toBeFalsy();
 });
