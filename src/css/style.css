@@ -1,14 +1,16 @@
 body {
     color: #999;
 }
-h1{
-    color: red;
-    text-decoration: double;
+
+.goblin .row {
+    display: flex;
 }
-.cell {
-    width: 140px;
-    height: 140px;
-    border: 2px solid red;
-    border-radius: 30px;
-    background-color: aquamarine;
+
+.goblin .col {
+    width: 120px;
+    height: 120px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    margin: 2px;
+    padding: 2px;
 }

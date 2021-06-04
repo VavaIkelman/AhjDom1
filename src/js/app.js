@@ -1,4 +1,4 @@
 import Goblin from './Goblin';
 
 const Game = new Goblin(document.querySelector('.goblin'));
-Game.rotate();
+Game.change();

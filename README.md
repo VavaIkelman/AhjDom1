@@ -1,3 +1,5 @@
-#DOM1 
-[![Build status](https://ci.appveyor.com/api/projects/status/clfoostk1ytv570x?svg=true)](https://ci.appveyor.com/project/VavaIkelman/ahjdom1)
-[Ссылка на GitPages](https://vavaikelman.github.io/AhjDom1/)
+# Webpack5
+
+[Информация о релизе Webpack 5](https://webpack.js.org/blog/2020-10-10-webpack-5-release/)
+
+[Migration Guide](https://webpack.js.org/migrate/5/)

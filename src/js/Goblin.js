@@ -1,10 +1,10 @@
 export default class Goblin {
-  constructor(element) {
-    this.cells = element.querySelectorAll('.cell');
-    this.goblinHead = element.querySelector('.head');
+  constructor(gameElement) {
+    this.cells = gameElement.querySelectorAll('.col');
+    this.goblinHead = gameElement.querySelector('.head');
   }
 
-  rotate() {
+  change() {
     let previous = 0;
     let rand = 0;
 

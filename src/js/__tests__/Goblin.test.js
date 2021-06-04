@@ -1,18 +1,22 @@
 import Goblin from '../Goblin';
 
-test('check cell', () => {
-  const html = document.createElement('div');
-  html.innerHTML = `<table class="goblin">
-  <tr>
-    <th class="cell">
-      <img src="img/goblin.png" class="head">
-    </th>
-    <th class="cell"></th>
-    <th class="cell"></th>
-    <th class="cell"></th>
-  </tr>
-</table>`;
-  const Game = new Goblin(html.querySelector('.goblin'));
+jest.useFakeTimers();
 
+test('change cell', () => {
+  const html = document.createElement('div');
+  html.innerHTML = `<section class="goblin">
+    <div class="row">
+      <div class="col">
+        <img src="img/goblin.png" class="head">
+      </div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+    </div>
+  </div>`;
+  const Game = new Goblin(html.querySelector('.goblin'));
   expect(Game.cells[0].contains(Game.goblinHead)).toBeTruthy();
+  Game.change();
+  jest.runTimersToTime(1500);
+  expect(Game.cells[0].contains(Game.goblinHead)).toBeFalsy();
 });
